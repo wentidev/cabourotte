@@ -1,0 +1,23 @@
+
+http:
+  host: "0.0.0.0"
+  port: 9013
+discovery:
+    http:
+      - name: "http-discorery"
+        interval: 10s
+        host: "localhost"
+        port: 8000
+        path: "/api/internal/cabourotte/discovery"
+        protocol: "http"
+        headers:
+          Authorization: "toto"
+exporters:
+  http:
+    - name: http-exporter
+      host: "localhost"
+      port: 8000
+      path: "/api/internal/cabourotte/import"
+      protocol: "http"
+      headers:
+        Authorization: "toto"
