@@ -17,7 +17,7 @@ exporters:
     - name: http-exporter
       host: "localhost"
       port: 8000
-      path: "/api/internal/cabourotte/import"
+      path: "/api/internal/cabourotte/import/local"
       protocol: "http"
       headers:
         Authorization: "toto"
